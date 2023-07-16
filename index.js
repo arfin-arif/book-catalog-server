@@ -51,7 +51,7 @@ const run = async () => {
           return res.status(401).json({ error: 'Invalid credentials' });
         }
         
-        res.json({ success: true, data: user });
+        res.json(user?.email );
       } catch (error) {
         res.status(500).json({ error: 'An error occurred' });
       }
